@@ -15,16 +15,6 @@ class ChampTexte
         $this->erreur = null;
     }
 
-    public function html() {
-        $html = "<label for=\"{$this->nom}\">{$this->libelle}</label>";
-        $html .= "<input type=\"text\" name=\"{$this->nom}\" id=\"{$this->nom}\"";
-        if ($this->estObligatoire) {
-            $html .= " required";
-        }
-        $html .= ">";
-        return $html;
-    }
-
     public function estRecu() {
         return isset($_POST[$this->nom]);
     }
@@ -47,6 +37,17 @@ class ChampTexte
 
     public function getErreur() {
         return $this->erreur;
+    }
+
+    public function html() {
+        $html = "<label for=\"{$this->nom}\">{$this->libelle}</label>";
+        $html .= "<input type=\"text\" name=\"{$this->nom}\" id=\"{$this->nom}\"";
+        if ($this->estObligatoire) {
+            $html .= " required";
+        }
+        $html .= " value=\"{$this->getValeur()}\"";
+        $html .= ">";
+        return $html;
     }
 }
 
