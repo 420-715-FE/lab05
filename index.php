@@ -1,12 +1,18 @@
 <?php
 
 require_once('classes/ChampTexte.php');
+require_once('classes/ChampNombre.php');
+
+$champAge = new ChampNombre('age', 'Âge', false, true);
+$champAge->setValeurMin(0);
+$champAge->setValeurMax(120);
 
 $champs = [
-    new ChampTexte('nom', 'Nom', true),
     new ChampTexte('prenom', 'Prénom', true),
-    new ChampTexte('email', 'Email', true),
+    new ChampTexte('nom', 'Nom', true),
+    new ChampTexte('courriel', 'Adresse courriel', true),
     new ChampTexte('telephone', 'Téléphone', false),
+    $champAge,
 ];
 
 foreach ($champs as $champ) {

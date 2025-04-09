@@ -23,7 +23,7 @@ class ChampTexte
         if ($this->estRecu()) {
             return htmlspecialchars(trim($_POST[$this->nom]));
         }
-        return "";
+        return null;
     }
 
     public function valider() {
@@ -40,7 +40,11 @@ class ChampTexte
     }
 
     public function html() {
-        $html = "<label for=\"{$this->nom}\">{$this->libelle}</label>";
+        $html = "<label for=\"{$this->nom}\">{$this->libelle}";
+        if ($this->estObligatoire) {
+            $html .= " (obligatoire)";
+        }
+        $html .= "</label>";
         $html .= "<input type=\"text\" name=\"{$this->nom}\" id=\"{$this->nom}\"";
         if ($this->estObligatoire) {
             $html .= " required";
