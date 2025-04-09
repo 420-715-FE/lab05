@@ -3,6 +3,7 @@
 require_once('classes/ChampTexte.php');
 require_once('classes/ChampNombre.php');
 require_once('classes/ListeDeroulante.php');
+require_once('classes/GroupeBoutonsRadio.php');
 
 $champAge = new ChampNombre('age', 'Âge', false, true);
 $champAge->setValeurMin(0);
@@ -23,6 +24,11 @@ $champProvince->ajouterOption('Terre-Neuve-et-Labrador');
 $champProvince->ajouterOption('Territoires du Nord-Ouest');
 $champProvince->ajouterOption('Yukon');
 
+$champTypeInscription = new GroupeBoutonsRadio('typeInscription', 'Type d\'inscription', true);
+$champTypeInscription->ajouterOption('Individuelle');
+$champTypeInscription->ajouterOption('Familliale');
+
+
 $champs = [
     new ChampTexte('prenom', 'Prénom', true),
     new ChampTexte('nom', 'Nom', true),
@@ -30,6 +36,7 @@ $champs = [
     new ChampTexte('telephone', 'Téléphone', false),
     $champAge,
     $champProvince,
+    $champTypeInscription,
 ];
 
 foreach ($champs as $champ) {
