@@ -1,7 +1,6 @@
 <?php
 
-class ChampNombre
-{
+class ChampNombre {
     private $nom;
     private $libelle;
     private $estObligatoire;

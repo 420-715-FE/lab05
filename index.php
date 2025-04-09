@@ -2,10 +2,26 @@
 
 require_once('classes/ChampTexte.php');
 require_once('classes/ChampNombre.php');
+require_once('classes/ListeDeroulante.php');
 
 $champAge = new ChampNombre('age', 'Âge', false, true);
 $champAge->setValeurMin(0);
 $champAge->setValeurMax(120);
+
+$champProvince = new ListeDeroulante('province', 'Province / Territoire', true);
+$champProvince->ajouterOption('Alberta');
+$champProvince->ajouterOption('Colombie-Britannique');
+$champProvince->ajouterOption('Île-du-Prince-Édouard');
+$champProvince->ajouterOption('Manitoba');
+$champProvince->ajouterOption('Nouveau-Brunswick');
+$champProvince->ajouterOption('Nouvelle-Écosse');
+$champProvince->ajouterOption('Nunavut');
+$champProvince->ajouterOption('Ontario');
+$champProvince->ajouterOption('Québec');
+$champProvince->ajouterOption('Saskatchewan');
+$champProvince->ajouterOption('Terre-Neuve-et-Labrador');
+$champProvince->ajouterOption('Territoires du Nord-Ouest');
+$champProvince->ajouterOption('Yukon');
 
 $champs = [
     new ChampTexte('prenom', 'Prénom', true),
@@ -13,6 +29,7 @@ $champs = [
     new ChampTexte('courriel', 'Adresse courriel', true),
     new ChampTexte('telephone', 'Téléphone', false),
     $champAge,
+    $champProvince,
 ];
 
 foreach ($champs as $champ) {
