@@ -51,6 +51,8 @@ class ChampNombre {
             } elseif ($valeur < $this->valeurMin || $valeur > $this->valeurMax) {
                 $this->erreur = "Le champ {$this->libelle} doit être entre {$this->valeurMin} et {$this->valeurMax}.";
             }
+        } else if ($this->estObligatoire) {
+            $this->erreur = "Le champ {$this->libelle} est obligatoire.";
         }
     }
 

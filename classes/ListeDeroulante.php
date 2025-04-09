@@ -44,6 +44,8 @@ class ListeDeroulante {
             if (!in_array($valeur, $this->options)) {
                 $this->erreur = "Le champ {$this->libelle} doit être une option valide.";
             }
+        } else if ($this->estObligatoire) {
+            $this->erreur = "Le champ {$this->libelle} est obligatoire.";
         }
     }
 

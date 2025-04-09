@@ -1,7 +1,6 @@
 <?php
 
-class ChampTexte
-{
+class ChampTexte {
     private $nom;
     private $libelle;
     private $estObligatoire;
@@ -32,6 +31,8 @@ class ChampTexte
             if ($this->estObligatoire && empty($valeur)) {
                 $this->erreur = "Le champ {$this->libelle} est obligatoire.";
             }
+        } else if ($this->estObligatoire) {
+            $this->erreur = "Le champ {$this->libelle} est obligatoire.";
         }
     }
 
