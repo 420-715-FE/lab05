@@ -45,7 +45,10 @@ class ChampNombre {
     public function valider() {
         if ($this->estRecu()) {
             $valeur = $this->getValeur();
-            if ($this->estObligatoire && empty($valeur)) {
+            if (!$this->estObligatoire && empty($valeur)) {
+                return;
+            }
+            if (empty($valeur)) {
                 $this->erreur = "Le champ {$this->libelle} est obligatoire.";
             } elseif (!is_numeric($valeur)) {
                 $this->erreur = "Le champ {$this->libelle} doit être un nombre.";

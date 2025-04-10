@@ -89,3 +89,13 @@ Les méthodes suivantes doivent être implémentées:
 * `html`: retourne le HTML permettant d'afficher le champ.
 
 Voici le résultat que vous devriez obtenir avec la valeur `$etape = 3` dans `index.php`:
+
+![](images-readme/etape3.gif)
+
+## Étape 4 - Classe `GroupeBoutonsRadio`
+
+La classe `GroupeBoutonsRadio` permet d'aficher des boutons radio dans un `fieldset`. Elle est très semblable à la classe `ListeDeroulante`. À vous de déterminer quoi changer par rapport au code de cette classe.
+
+Voici le résultat que vous devriez obtenir avec la valeur `$etape = 34` dans `index.php`:
+
+![](images-readme/etape4.gif)
