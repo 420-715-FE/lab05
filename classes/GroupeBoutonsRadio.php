@@ -16,6 +16,10 @@ class GroupeBoutonsRadio {
         $this->erreur = null;
     }
 
+    public function getLibelle() {
+        return $this->libelle;
+    }
+
     public function ajouterOption($option)
     {
         $this->options[] = $option;

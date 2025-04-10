@@ -16,6 +16,10 @@ class ListeDeroulante {
         $this->erreur = null;
     }
 
+    public function getLibelle() {
+        return $this->libelle;
+    }
+
     public function ajouterOption($texte)
     {
         $this->options[] = $texte;

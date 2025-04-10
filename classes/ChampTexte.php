@@ -14,6 +14,10 @@ class ChampTexte {
         $this->erreur = null;
     }
 
+    public function getLibelle() {
+        return $this->libelle;
+    }
+
     public function estRecu() {
         return isset($_POST[$this->nom]);
     }

@@ -20,6 +20,10 @@ class ChampNombre {
         $this->erreur = null;
     }
 
+    public function getLibelle() {
+        return $this->libelle;
+    }
+
     public function setValeurMin($valeurMin) {
         $this->valeurMin = $valeurMin;
     }
