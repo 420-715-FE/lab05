@@ -9,8 +9,7 @@ class ChampNombre {
     private $doitEtreEntier;
     private $erreur;
 
-    public function __construct($nom, $libelle, $estObligatoire, $doitEtreEntier)
-    {
+    public function __construct($nom, $libelle, $estObligatoire, $doitEtreEntier) {
         $this->nom = $nom;
         $this->libelle = $libelle;
         $this->estObligatoire = $estObligatoire;

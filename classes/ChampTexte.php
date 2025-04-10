@@ -6,8 +6,7 @@ class ChampTexte {
     private $estObligatoire;
     private $erreur;
 
-    public function __construct($nom, $libelle, $estObligatoire)
-    {
+    public function __construct($nom, $libelle, $estObligatoire) {
         $this->nom = $nom;
         $this->libelle = $libelle;
         $this->estObligatoire = $estObligatoire;

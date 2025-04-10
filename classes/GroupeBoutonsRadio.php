@@ -7,8 +7,7 @@ class GroupeBoutonsRadio {
     private $options;
     private $erreur;
 
-    public function __construct($nom, $libelle, $estObligatoire)
-    {
+    public function __construct($nom, $libelle, $estObligatoire) {
         $this->nom = $nom;
         $this->libelle = $libelle;
         $this->estObligatoire = $estObligatoire;
@@ -20,26 +19,22 @@ class GroupeBoutonsRadio {
         return $this->libelle;
     }
 
-    public function ajouterOption($option)
-    {
+    public function ajouterOption($option) {
         $this->options[] = $option;
     }
 
-    public function estRecu()
-    {
+    public function estRecu() {
         return isset($_POST[$this->nom]);
     }
 
-    public function getValeur()
-    {
+    public function getValeur() {
         if ($this->estRecu()) {
             return htmlspecialchars(trim($_POST[$this->nom]));
         }
         return null;
     }
 
-    public function valider()
-    {
+    public function valider() {
         if ($this->estRecu()) {
             $valeur = $this->getValeur();
             if ($this->estObligatoire && empty($valeur)) {
@@ -53,13 +48,11 @@ class GroupeBoutonsRadio {
         }
     }
 
-    public function getErreur()
-    {
+    public function getErreur() {
         return $this->erreur;
     }
 
-    public function html()
-    {
+    public function html() {
         $html = "<fieldset>";
         $html .= "<legend>{$this->libelle}";
         if ($this->estObligatoire) {
