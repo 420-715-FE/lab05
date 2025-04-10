@@ -96,6 +96,24 @@ Voici le résultat que vous devriez obtenir avec la valeur `$etape = 3` dans `in
 
 La classe `GroupeBoutonsRadio` permet d'aficher des boutons radio dans un `fieldset`. Elle est très semblable à la classe `ListeDeroulante`. À vous de déterminer quoi changer par rapport au code de cette classe.
 
-Voici le résultat que vous devriez obtenir avec la valeur `$etape = 34` dans `index.php`:
+Voici le résultat que vous devriez obtenir avec la valeur `$etape = 4` dans `index.php`:
 
 ![](images-readme/etape4.gif)
+
+## Étape 5 - Classe `Formulaire`
+
+Vous devez maintenant créer une classe `Formulaire` qui contiendra tous les champs. Elle doit avoir un attribut `$titre` indiquant le titre du formulaire qui sera affiché dans une balise `h1`, ainsi qu'un attribut `$champs` contenant un tableau de champs.
+
+Le constructeur prend un seul paramètre `$titre` pour initialiser l'attribut `$titre`.
+
+Une méthode `ajouterChamp($champ)` reçoit un paramètre soit de type `ChampNombre`, `ChampTexte`, `GroupeBoutonsRadio` ou `ListeDeroulante`, et l'ajoute au tableau `$champs`.
+
+Une méthode `estRecu` utilise la méthode du même nom de chaque champ et retourne  `true` s'ils ont tous été reçus, ou `false` si ce n'est pas le cas.
+
+Une méthode `estValide` appelle la méthode `valider` de chaque champ, puis la méthode `getErreur` de chaque champ. Si la méthode `getErreur` retourne une valeur autre que `null` pour au moins un des champs, la méthode `estValide` retourne `false`. Sinon, elle retourne `true`.
+
+La méthode `getChamps` retourne le tableau `champs`.
+
+La méthode `html` retourne le HTML permettant d'afficher le formulaire. Elle utilise la méthode `html` de chacun des champs.
+
+Le résultat visuel avec la valeur `$etape = 5` dans `index.php` devrait être le même qu'avec `$etape = 4`.
