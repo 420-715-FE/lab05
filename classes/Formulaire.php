@@ -31,6 +31,10 @@ class Formulaire {
         return true;
     }
 
+    public function getChamps() {
+        return $this->champs;
+    }
+
     public function html() {
         $html = "<h1>{$this->titre}</h1>";
         $html .= "<form method=\"POST\" action=\"\">";

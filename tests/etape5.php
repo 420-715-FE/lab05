@@ -39,6 +39,14 @@ $champTypeInscription->ajouterOption('Individuelle');
 $champTypeInscription->ajouterOption('Familliale');
 $formulaire->ajouterChamp($champTypeInscription);
 
-echo $formulaire->html();
+if ($formulaire->estRecu() && $formulaire->estValide()) {
+    echo "<h1>Formulaire soumis avec succès</h1>";
+    foreach ($formulaire->getChamps() as $champ) {
+        echo "<p>{$champ->getLibelle()}: {$champ->getValeur()}</p>";
+    }
+    echo '<a href="">Retour</a>';   
+} else {
+    echo $formulaire->html(); 
+}
 
 ?>
