@@ -4,13 +4,13 @@ L'objectif de ce laboratoire est de vous faire créer vos premières classes en 
 
 Dans le fichier `index.php`, vous trouverez une variable contenant le numéro de l'étape du laboratoire sur lequel vous êtes en train de travailler. Selon ce numéro, un des fichiers du dossier `tests` sera inclus. Ouvrez le fichier `tests/etape1.php` et prenez connaissance de son contenu. Vous verrez qu'il instancie plusieurs objets de la classe `ChampTexte`.
 
-Suivez les consignes ci-dessous pour implémenter les différentes classes dans les fichiers correspondants du dossier `classes`, en mettant à jour la variable `$etape` à chaque fois. **Vous ne devez en aucun cas modifier les fichiers `index.php` et ceux du dossier `tests`.**
+Suivez les consignes ci-dessous pour implémenter les différentes classes dans les fichiers correspondants du dossier `classes`, en mettant à jour la variable `$etape` à chaque fois. **Vous ne devez en aucun cas modifier les fichiers du dossier `tests`.**
 
 ## Étape 1 - Classe `ChampTexte`
 
 Cette classe permet de générer un champ texte.
 
-La classe doit avoir les attributs suivant:
+La classe doit avoir les attributs suivants:
 
 * `$nom`: indique le nom du champ qui apparaîtra dans l'attribut `name` de la balise HTML `input` lorsque celle-ci sera générée.
 * `$libelle`: indique le texte qui sera affiché comme libellé du champ.
@@ -30,5 +30,7 @@ Les méthodes suivantes doivent être implémentées:
 
 Voici le résultat que vous devriez obtenir avec la valeur `$etape = 1` dans `index.php`:
 
-
 ![](images-readme/etape1.gif)
+
+## Étape 2 - Classe `ChampNombre`
+

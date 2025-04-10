@@ -53,7 +53,7 @@ class ChampTexte {
         if ($this->estObligatoire) {
             $html .= " required";
         }
-        $html .= " value=\"{$this->getValeur()}\"";
+        $html .= " autocomplete=\"off\" value=\"{$this->getValeur()}\"";
         $html .= ">";
         return $html;
     }

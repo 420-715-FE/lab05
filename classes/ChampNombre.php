@@ -65,7 +65,7 @@ class ChampNombre {
             $html .= " (obligatoire)";
         }
         $html .= "</label>";
-        $html .= "<input type=\"text\" name=\"{$this->nom}\" id=\"{$this->nom}\"";
+        $html .= "<input autocomplete=\"off\" type=\"text\" name=\"{$this->nom}\" id=\"{$this->nom}\"";
         if ($this->estObligatoire) {
             $html .= " required";
         }
