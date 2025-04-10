@@ -23,6 +23,11 @@ if (!$champs[0]->estRecu() || $erreurs) {
     echo "<h1>Formulaire d'inscription</h1>";
     echo '<form method="post">';
     foreach ($champs as $champ) {
+        if ($champ->getErreur() !== null) {
+            echo "<p>{$champ->getErreur()}</p>";
+        }
+    }
+    foreach ($champs as $champ) {
         echo $champ->html();
     }
     echo '<input type="submit" value="Soumettre">';
