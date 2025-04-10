@@ -9,7 +9,7 @@
 <body>
     <?php
 
-    $etape = 2;
+    $etape = 3;
 
     include("tests/etape$etape.php");
 
