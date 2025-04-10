@@ -46,7 +46,7 @@ La classe doit avoir les attributs suivants:
 * `$valeurMax`: indique la valeur maximale acceptée.
 * `$doitEtreEntier`: booléen indiquant si le nombre saisi doit être un entier.
 
-Le constructeur doit prendre 4 paramètres permettant d'initialiser les attributs `$nom`, `$libelle`, `$estObligatoire` et `$doitEtreEntier`.. Il doit initialiser l'attribut `$erreur` à `null`, l'attribut `$valeurMin` à `-INF` et `$valeurMax` à `INF`.
+Le constructeur doit prendre 4 paramètres permettant d'initialiser les attributs `$nom`, `$libelle`, `$estObligatoire` et `$doitEtreEntier`. Il doit initialiser l'attribut `$erreur` à `null`, l'attribut `$valeurMin` à `-INF` et `$valeurMax` à `INF`.
     
 > `INF` représente l'infini en PHP. Autrement dit, par défaut il n'y a pas de valeurs minimale et maximale. En mettant l'infini, on s'évite d'écrire du code supplémentaire pour gérer le cas par défaut.
 
