@@ -63,3 +63,29 @@ Les méthodes suivantes doivent être implémentées:
 Voici le résultat que vous devriez obtenir avec la valeur `$etape = 2` dans `index.php`:
 
 ![](images-readme/etape2.gif)
+
+## Étape 3 - Classe `ListeDeroulante`
+
+Cette classe permet de générer une liste déroulante.
+
+La classe doit avoir les attributs suivants:
+
+* `$nom`: indique le nom du champ qui apparaîtra dans l'attribut `name` de la balise HTML `input` lorsque celle-ci sera générée.
+* `$libelle`: indique le texte qui sera affiché comme libellé du champ.
+* `$estObligatoire`: booléen indiquant si le champ est obligatoire ou non.
+* `$erreur`: contient un texte d'erreur si la valeur saisie dans le champ est invalide.
+* `$options`: un tableau contenant les options de la liste déroulante.
+
+Le constructeur doit prendre 3 paramètres permettant d'initialiser les attributs `$nom`, `$libelle` et `$estObligatoire`. Il doit initialiser l'attribut `$erreur` à `null`.
+
+Les méthodes suivantes doivent être implémentées:
+
+* `ajouterOption($option)`: ajoute la chaîne de caractères reçue en paramètre au tableau `$options`
+* `getLibelle()`: retourne la valeur du libellé
+* `estRecu()`: retourne un booléen indiquant si ce champ a été reçu ou non (via `$_POST`)
+* `getValeur()`: si le champ a été reçu, retourne sa valeur, sinon retourne `null`. Les balises HTML doivent être désactivées dans la valeur retournée. Les espaces au début et à la fin de la valeur doivent aussi avoir été retirés (voir la fonction [trim](https://www.php.net/manual/fr/function.trim.php)).
+* `valider()`: valide la valeur et insère le message approprié dans l'attribut `$erreur` si elle est invalide. Pensez à tous les cas où un message d'erreur est nécessaire.
+* `getErreur`: retourne la valeur de l'attribut `$erreur`.
+* `html`: retourne le HTML permettant d'afficher le champ.
+
+Voici le résultat que vous devriez obtenir avec la valeur `$etape = 3` dans `index.php`:
